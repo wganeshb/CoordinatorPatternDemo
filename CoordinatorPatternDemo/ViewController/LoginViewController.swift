@@ -23,6 +23,10 @@ class LoginViewController: UIViewController, CoordinatorBoard {
     }
    
     @IBAction func didTapOnLoginButton(_ sender: Any) {
+        
+        if loginChildCoordinator==nil {
+            debugPrint("loginChildCoordinator is nil")
+        }
         loginChildCoordinator?.navigateToHomeViewController(username: txtUsername.text ?? "")
     }
     
