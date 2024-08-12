@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, CoordinatorBoard {
     weak var loginChildCoordinator: LoginChildCoordinator?
     
     @IBAction func didTapOnResetPasswordButton(_ sender: Any) {
-        loginChildCoordinator?.navigateToResetPasswprdViewController()
+        loginChildCoordinator?.navigateToResetPasswordViewController()
     }
     
     @IBAction func didTapOnSignupButton(_ sender: Any) {

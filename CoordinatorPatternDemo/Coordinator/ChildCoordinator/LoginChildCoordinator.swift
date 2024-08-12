@@ -7,23 +7,22 @@
 
 import UIKit
 
-class LoginChildCoordinator: Coordinator {
-    var navigationController: UINavigationController
+class LoginChildCoordinator: ChildCoordinator {
     
-    var childCoordinator: [any Coordinator] = [Coordinator]()
-    weak var mainCoordinator: MainCoordinator?
+    weak var parentCoordinator: ParentCoordinator?
+    var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func configureRootViewController() {
+    func configureChildViewController() {
         let loginViewController = LoginViewController.instantiateFromStoryboard()
         loginViewController.loginChildCoordinator = self
         self.navigationController.pushViewController(loginViewController, animated: true)
     }
     
-    func navigateToResetPasswprdViewController() {
+    func navigateToResetPasswordViewController() {
         let resetPasswordViewController = ResetPasswordViewController.instantiateFromStoryboard()
         self.navigationController.pushViewController(resetPasswordViewController, animated: true)
     }
@@ -34,9 +33,11 @@ class LoginChildCoordinator: Coordinator {
     }
     
     func navigateToHomeViewController(username: String) {
-        let homeChildCoordinator = HomeChildCoordinator(navigationController: self.navigationController, username: username)
-        mainCoordinator?.childCoordinator.append(homeChildCoordinator)
-        homeChildCoordinator.configureRootViewController()
+        let homeChildCoordinator = ChildCoordinatorFactory.create(with: parentCoordinator!.navigationController, type: .home)
+        homeChildCoordinator.passParameter(value: HomeChildParameter(userName: username))
+        
+        parentCoordinator?.childCoordinator.append(homeChildCoordinator)
+        homeChildCoordinator.configureChildViewController()
     }
     
     deinit {

@@ -7,9 +7,9 @@
 
 import UIKit
  
-class MainCoordinator: Coordinator {
+class MainCoordinator: ParentCoordinator {
     
-    var childCoordinator: [Coordinator] = [Coordinator]()
+    var childCoordinator: [ChildCoordinator] = [ChildCoordinator]()
     
     var navigationController: UINavigationController
     
@@ -18,13 +18,13 @@ class MainCoordinator: Coordinator {
     }
     
     func configureRootViewController() {
-        let loginChildCoordinator = LoginChildCoordinator(navigationController: self.navigationController)
+        let loginChildCoordinator = ChildCoordinatorFactory.create(with: self.navigationController, type: .login)
         childCoordinator.append(loginChildCoordinator)
-        loginChildCoordinator.mainCoordinator = self
-        loginChildCoordinator.configureRootViewController()
+        loginChildCoordinator.parentCoordinator = self
+        loginChildCoordinator.configureChildViewController()
     }
     
-    func removeChildCoordinator(child: Coordinator) {
+    func removeChildCoordinator(child: ChildCoordinator) {
         for(index, coordinator) in childCoordinator.enumerated() {
             if(coordinator === child) {
                 debugPrint("childCoordinator type : \(childCoordinator.debugDescription)")

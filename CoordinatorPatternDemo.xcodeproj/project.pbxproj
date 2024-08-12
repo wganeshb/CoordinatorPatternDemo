@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F0B58152C69CFCB00126151 /* LoginChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B58142C69CFCB00126151 /* LoginChildCoordinator.swift */; };
 		1F0B58172C69D32D00126151 /* HomeChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B58162C69D32D00126151 /* HomeChildCoordinator.swift */; };
+		1F0B58192C6A447E00126151 /* ChildCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B58182C6A447E00126151 /* ChildCoordinatorFactory.swift */; };
+		1F0B581C2C6A464500126151 /* HomeChildParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B581B2C6A464500126151 /* HomeChildParameter.swift */; };
 		1F81D05E2C675F40009D0E10 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D05D2C675F40009D0E10 /* Coordinator.swift */; };
 		1F81D0602C675FB5009D0E10 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D05F2C675FB5009D0E10 /* MainCoordinator.swift */; };
 		1F81D0622C676029009D0E10 /* CoordinatorBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D0612C676029009D0E10 /* CoordinatorBoard.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		1F0B58142C69CFCB00126151 /* LoginChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginChildCoordinator.swift; sourceTree = "<group>"; };
 		1F0B58162C69D32D00126151 /* HomeChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildCoordinator.swift; sourceTree = "<group>"; };
+		1F0B58182C6A447E00126151 /* ChildCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatorFactory.swift; sourceTree = "<group>"; };
+		1F0B581B2C6A464500126151 /* HomeChildParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildParameter.swift; sourceTree = "<group>"; };
 		1F81D05D2C675F40009D0E10 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1F81D05F2C675FB5009D0E10 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1F81D0612C676029009D0E10 /* CoordinatorBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBoard.swift; sourceTree = "<group>"; };
@@ -62,6 +66,14 @@
 			path = ChildCoordinator;
 			sourceTree = "<group>";
 		};
+		1F0B581A2C6A463900126151 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F0B581B2C6A464500126151 /* HomeChildParameter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1F81D05C2C675F2F009D0E10 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 				1F81D05D2C675F40009D0E10 /* Coordinator.swift */,
 				1F81D05F2C675FB5009D0E10 /* MainCoordinator.swift */,
 				1F81D0612C676029009D0E10 /* CoordinatorBoard.swift */,
+				1F0B58182C6A447E00126151 /* ChildCoordinatorFactory.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -92,6 +105,7 @@
 		1FDC92582C67540E00FC898E /* CoordinatorPatternDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1F0B581A2C6A463900126151 /* Models */,
 				1F81D05C2C675F2F009D0E10 /* Coordinator */,
 				1FDC926D2C67545300FC898E /* ViewController */,
 				1FDC92592C67540E00FC898E /* AppDelegate.swift */,
@@ -186,10 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0B58192C6A447E00126151 /* ChildCoordinatorFactory.swift in Sources */,
 				1FDC92732C6754D300FC898E /* SignupViewController.swift in Sources */,
 				1F0B58152C69CFCB00126151 /* LoginChildCoordinator.swift in Sources */,
 				1F81D0602C675FB5009D0E10 /* MainCoordinator.swift in Sources */,
 				1FDC925E2C67540E00FC898E /* HomeViewController.swift in Sources */,
+				1F0B581C2C6A464500126151 /* HomeChildParameter.swift in Sources */,
 				1FDC925A2C67540E00FC898E /* AppDelegate.swift in Sources */,
 				1F81D0622C676029009D0E10 /* CoordinatorBoard.swift in Sources */,
 				1FDC925C2C67540E00FC898E /* SceneDelegate.swift in Sources */,

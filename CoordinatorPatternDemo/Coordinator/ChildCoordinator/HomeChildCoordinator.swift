@@ -7,22 +7,25 @@
 
 import UIKit
 
-class HomeChildCoordinator: Coordinator {
+class HomeChildCoordinator: ChildCoordinator {
     
-    var childCoordinator: [Coordinator] = [Coordinator]()
-    
+    weak var parentCoordinator: ParentCoordinator?
     var navigationController: UINavigationController
-    private var homeViewUsername: String
+    private var homeViewUsername: String = ""
     
-    init(navigationController: UINavigationController, username: String) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.homeViewUsername = username
     }
     
-    func configureRootViewController() {
+    func configureChildViewController() {
         let homeViewController = HomeViewController.instantiateFromStoryboard()
         homeViewController.username = self.homeViewUsername
         self.navigationController.pushViewController(homeViewController, animated: true)
+    }
+    
+    func passParameter(value: any Decodable) {
+        guard let parameter = value as? HomeChildParameter else { return }
+        self.homeViewUsername = parameter.userName
     }
     
     deinit {
