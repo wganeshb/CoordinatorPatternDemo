@@ -24,4 +24,8 @@ class HomeChildCoordinator: Coordinator {
         homeViewController.username = self.homeViewUsername
         self.navigationController.pushViewController(homeViewController, animated: true)
     }
-}   
+    
+    deinit {
+        debugPrint("Deinitializing \(self)")
+    }
+}

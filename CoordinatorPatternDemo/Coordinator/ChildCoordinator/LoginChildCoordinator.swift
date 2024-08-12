@@ -40,4 +40,8 @@ class LoginChildCoordinator: Coordinator {
         homeChildCoordinator.configureRootViewController()
     }
     
+    deinit {
+        debugPrint("Deinitializing \(self)")
+    }
+    
 }

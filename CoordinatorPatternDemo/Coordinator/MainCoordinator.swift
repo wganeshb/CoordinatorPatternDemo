@@ -20,6 +20,7 @@ class MainCoordinator: Coordinator {
     func configureRootViewController() {
         let loginChildCoordinator = LoginChildCoordinator(navigationController: self.navigationController)
         childCoordinator.append(loginChildCoordinator)
+        loginChildCoordinator.mainCoordinator = self
         loginChildCoordinator.configureRootViewController()
     }
     
