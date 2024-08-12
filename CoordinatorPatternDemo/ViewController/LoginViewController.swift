@@ -12,7 +12,6 @@ class LoginViewController: UIViewController, CoordinatorBoard {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    //weak var mainCoordinator: MainCoordinator?
     weak var loginChildCoordinator: LoginChildCoordinator?
     
     @IBAction func didTapOnResetPasswordButton(_ sender: Any) {
