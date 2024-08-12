@@ -17,6 +17,25 @@ class LoginChildCoordinator: Coordinator {
     }
     
     func configureRootViewController() {
-        
+        let loginViewController = LoginViewController.instantiateFromStoryboard()
+        loginViewController.loginChildCoordinator = self
+        self.navigationController.pushViewController(loginViewController, animated: true)
     }
+    
+    func navigateToResetPasswprdViewController() {
+        let resetPasswordViewController = ResetPasswordViewController.instantiateFromStoryboard()
+        self.navigationController.pushViewController(resetPasswordViewController, animated: true)
+    }
+    
+    func navigateToSignupViewController() {
+        let signupViewController = SignupViewController.instantiateFromStoryboard()
+        self.navigationController.pushViewController(signupViewController, animated: true)
+    }
+    
+    func navigateToHomeViewController(username: String) {
+        let homeViewController = HomeViewController.instantiateFromStoryboard()
+        homeViewController.username = username
+        self.navigationController.pushViewController(homeViewController, animated: true)
+    }
+    
 }

@@ -12,18 +12,19 @@ class LoginViewController: UIViewController, CoordinatorBoard {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    weak var mainCoordinator: MainCoordinator?
+    //weak var mainCoordinator: MainCoordinator?
+    weak var loginChildCoordinator: LoginChildCoordinator?
     
     @IBAction func didTapOnResetPasswordButton(_ sender: Any) {
-        mainCoordinator?.navigateToResetPasswprdViewController()
+        loginChildCoordinator?.navigateToResetPasswprdViewController()
     }
     
     @IBAction func didTapOnSignupButton(_ sender: Any) {
-        mainCoordinator?.navigateToSignupViewController()
+        loginChildCoordinator?.navigateToSignupViewController()
     }
    
     @IBAction func didTapOnLoginButton(_ sender: Any) {
-        mainCoordinator?.navigateToHomeViewController(username: txtUsername.text ?? "")
+        loginChildCoordinator?.navigateToHomeViewController(username: txtUsername.text ?? "")
     }
     
     deinit {
