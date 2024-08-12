@@ -11,6 +11,7 @@ class LoginChildCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     var childCoordinator: [any Coordinator] = [Coordinator]()
+    weak var mainCoordinator: MainCoordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -33,9 +34,9 @@ class LoginChildCoordinator: Coordinator {
     }
     
     func navigateToHomeViewController(username: String) {
-        let homeViewController = HomeViewController.instantiateFromStoryboard()
-        homeViewController.username = username
-        self.navigationController.pushViewController(homeViewController, animated: true)
+        let homeChildCoordinator = HomeChildCoordinator(navigationController: self.navigationController, username: username)
+        mainCoordinator?.childCoordinator.append(homeChildCoordinator)
+        homeChildCoordinator.configureRootViewController()
     }
     
 }

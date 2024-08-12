@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F0B58152C69CFCB00126151 /* LoginChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B58142C69CFCB00126151 /* LoginChildCoordinator.swift */; };
+		1F0B58172C69D32D00126151 /* HomeChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B58162C69D32D00126151 /* HomeChildCoordinator.swift */; };
 		1F81D05E2C675F40009D0E10 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D05D2C675F40009D0E10 /* Coordinator.swift */; };
 		1F81D0602C675FB5009D0E10 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D05F2C675FB5009D0E10 /* MainCoordinator.swift */; };
 		1F81D0622C676029009D0E10 /* CoordinatorBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81D0612C676029009D0E10 /* CoordinatorBoard.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1F0B58142C69CFCB00126151 /* LoginChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginChildCoordinator.swift; sourceTree = "<group>"; };
+		1F0B58162C69D32D00126151 /* HomeChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildCoordinator.swift; sourceTree = "<group>"; };
 		1F81D05D2C675F40009D0E10 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1F81D05F2C675FB5009D0E10 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1F81D0612C676029009D0E10 /* CoordinatorBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBoard.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				1F0B58142C69CFCB00126151 /* LoginChildCoordinator.swift */,
+				1F0B58162C69D32D00126151 /* HomeChildCoordinator.swift */,
 			);
 			path = ChildCoordinator;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				1FDC925C2C67540E00FC898E /* SceneDelegate.swift in Sources */,
 				1FDC92712C6754B000FC898E /* LoginViewController.swift in Sources */,
 				1FDC926F2C67549A00FC898E /* ResetPasswordViewController.swift in Sources */,
+				1F0B58172C69D32D00126151 /* HomeChildCoordinator.swift in Sources */,
 				1F81D05E2C675F40009D0E10 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
