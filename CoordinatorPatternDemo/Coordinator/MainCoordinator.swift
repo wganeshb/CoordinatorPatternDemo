@@ -23,6 +23,14 @@ class MainCoordinator: Coordinator {
         loginChildCoordinator.configureRootViewController()
     }
     
+    func removeChildCoordinator(child: Coordinator) {
+        for(index, coordinator) in childCoordinator.enumerated() {
+            if(coordinator === child) {
+                debugPrint("childCoordinator type : \(childCoordinator.debugDescription)")
+                childCoordinator.remove(at: index)
+                break
+            }
+        }
+    }
     
-     
 }

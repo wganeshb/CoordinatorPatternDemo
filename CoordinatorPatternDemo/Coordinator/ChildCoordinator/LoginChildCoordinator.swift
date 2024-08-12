@@ -36,6 +36,7 @@ class LoginChildCoordinator: Coordinator {
     func navigateToHomeViewController(username: String) {
         let homeChildCoordinator = HomeChildCoordinator(navigationController: self.navigationController, username: username)
         mainCoordinator?.childCoordinator.append(homeChildCoordinator)
+        mainCoordinator?.removeChildCoordinator(child: self)
         homeChildCoordinator.configureRootViewController()
     }
     
